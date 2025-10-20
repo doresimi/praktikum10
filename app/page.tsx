@@ -1,103 +1,105 @@
-import Image from "next/image";
+import Link from 'next/link';
+import React from 'react';
 
-export default function Home() {
+
+
+const Home: React.FC = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      
+      <div className="bg-light">
+        <div className="container col-xxl-8 px-4 py-5">
+          <div className="row align-items-center g-5 py-5">
+            <div className="col-lg-12 text-center">
+              <h1 className="display-3 fw-bold lh-1 mb-3">Sempurnakan Momen Anda</h1>
+              <p className="lead col-lg-8 mx-auto">
+                Dengan hidangan istimewa dari kami, setiap acara menjadi tak terlupakan.
+              </p>
+              <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+                <Link href="/catering" className="btn btn-primary btn-lg px-4 me-md-2">Lihat Paket Kami</Link>
+                <Link href="/kontak" className="btn btn-outline-secondary btn-lg px-4">Hubungi Kami</Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+    
+      <div className="container my-5 py-5">
+        <h2 className="text-center fw-bold mb-5">Paket Katering Paling Populer</h2>
+        <div className="row">
+          {/* Paket Kaum Tani (ID: 1) */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100 border-0 shadow-sm">
+             
+             
+              <div className="card-body">
+                <h5 className="card-title">Paket Kaum Tani (peasants)</h5>
+                <p className="card-text">Nasi kemarin campur garam ditambah kecap manis.</p>
+              </div>
+              <div className="card-footer bg-white border-0 pb-3">
+                
+                <Link href="/paket/1" className="btn btn-outline-primary w-100">Lihat Detail</Link>
+              </div>
+            </div>
+          </div>
+          
+          {/* Paket Ksatria (ID: 2) */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100 border-0 shadow-sm">
+        
+            
+              <div className="card-body">
+                <h5 className="card-title">Paket Ksatria</h5>
+                <p className="card-text">Nasi padang Ayam Kari dengan Telur BALADO dibaluti bumbu rendang biasa aja.</p>
+              </div>
+              <div className="card-footer bg-white border-0 pb-3">
+                <Link href="/paket/2" className="btn btn-outline-primary w-100">Lihat Detail</Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Paket Pendeta (ID: 3) */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100 border-0 shadow-sm">
+             
+              
+              <div className="card-body">
+                <h5 className="card-title">Paket Pendeta</h5>
+                <p className="card-text">Nikmati puncak kenikmatan dunia dengan A5 Olive Wagyu.</p>
+              </div>
+              <div className="card-footer bg-white border-0 pb-3">
+                <Link href="/paket/3" className="btn btn-outline-primary w-100">Lihat Detail</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-light py-5">
+        <div className="container">
+          <h2 className="text-center fw-bold mb-5">Mengapa Memilih Kami?</h2>
+          <div className="row text-center">
+            <div className="col-md-4 mb-4">
+              <i className="bi bi-award-fill fs-1 text-primary"></i>
+              <h4 className="mt-3">Bahan Baku Terbaik</h4>
+              <p className="text-muted">Kami hanya menggunakan bahan baku segar dan berkualitas tinggi dari pemasok terpercaya.</p>
+            </div>
+            <div className="col-md-4 mb-4">
+              <i className="bi bi-people-fill fs-1 text-primary"></i>
+              <h4 className="mt-3">Chef Profesional</h4>
+              <p className="text-muted">Dimasak oleh tim chef berpengalaman untuk menjamin cita rasa yang konsisten dan lezat.</p>
+            </div>
+            <div className="col-md-4 mb-4">
+              <i className="bi bi-truck fs-1 text-primary"></i>
+              <h4 className="mt-3">Pengiriman Tepat Waktu</h4>
+              <p className="text-muted">Layanan pengiriman kami memastikan pesanan Anda tiba di lokasi tepat waktu dan dalam kondisi prima.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
+
+export default Home;
